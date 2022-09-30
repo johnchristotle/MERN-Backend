@@ -3,6 +3,16 @@
 A REST API Service on a non-relational Database (MongoDB) with protected endpoints.
 This can be used with any JavaScript frontend framework.
 
+## Tools:
+* [Express.js](https://expressjs.com/en/guide/routing.html)
+* [Node.js](https://nodejs.org/en/about/)
+* [mongoose (mongoDB)](https://mongoosejs.com/)
+* [jsonwebtoken](https://jwt.io/introduction)
+* [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+* [cryptojs](https://www.npmjs.com/package/crypto-js)
+* [express-async-handler](https://www.npmjs.com/package/express-async-handler)
+
+
 ## Script/Frontend
 ```
 "scripts": {
@@ -32,7 +42,7 @@ At the package.json file, a script has been arranged to run the program as shown
 
 ## Endpoints
 Using Postman, you can access this endpoints.
-* NOTE: Bearer Token MUST be pass to the Heasders for authorization and access.
+* NOTE: Bearer Token MUST be pass to the Headers for authorization and access.
 See Examples bellow the Goals/Users note:
 
 
