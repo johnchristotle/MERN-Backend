@@ -40,6 +40,7 @@ See Examples bellow the Goals/Users note:
 * Create goals (Private: Only an authenticated user can create goal)
 * POST: http://localhost:5001/api/goals
 
+```
 e.g:
 * Sending...
 **Content-Type:* application/json
@@ -61,6 +62,8 @@ e.g:
     "__v": 0
 }
 
+```
+
 **Data Description:**
 
 * _id: goal id
@@ -74,6 +77,7 @@ e.g:
 * Get goals (Private: Having authenticated, User can get all their goals with this endpoint)
 * GET: http://localhost:5001/api/goals
 
+```
 e.g:
 **Response:*
 
@@ -96,10 +100,12 @@ e.g:
     }
 ]
 
+```
 
 * Get goals by :id (Private: Only an authenticated user can also do this)
 * GET: http://localhost:5001/api/goals/63365b0f3e6bcc914c46072a
 
+```
 e.g:
 **Response:*
 
@@ -112,10 +118,12 @@ e.g:
         "__v": 0
     },
 
+```
 
 * Update goals by :id (Private: Only an authenticated user can also do this)
 * PUT: http://localhost:5001/api/goals/63365b163e6bcc914c46072d
 
+```
 e.g:
 * Sending...
 **Content-Type:* application/json
@@ -137,6 +145,8 @@ e.g:
     "__v": 0
 }
 
+```
+
 **Data Description:**
 
 * _id: goal id
@@ -157,6 +167,7 @@ e.g:
 
 * POST: http://localhost:5001/api/users/register
 
+```
 e.g:
 * Sending...
 **Content-Type:* application/json
@@ -182,6 +193,8 @@ e.g:
     "publicKey": "pk_e3GBOb9SUIxqYpabLS5fK1tdb"
 }
 
+```
+
 **Data Description:**
 
 * _id: user id
@@ -198,6 +211,7 @@ e.g:
 
 * POST: http://localhost:5001/api/users/login
 
+```
 e.g:
 * Sending...
 **Content-Type:* application/json
@@ -221,6 +235,8 @@ e.g:
     "publicKey": "pk_e3GBOb9SUIxqYpabLS5fK1tdb"
 }
 
+```
+
 **Data Description:**
 
 * _id: user id
@@ -238,6 +254,7 @@ e.g:
 GET: http://localhost:5001/api/users/me
 **Token:* Bearer Token passed as to the headers
 
+```
 e.g:
 **Response:*
 
@@ -251,6 +268,7 @@ e.g:
     "publicKey": "pk_e3GBOb9SUIxqYpabLS5fK1tdb"
 }
 
+```
 
 **Data Description:**
 
