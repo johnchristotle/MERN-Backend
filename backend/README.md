@@ -290,5 +290,4 @@ e.g:
 * publicKey: user's public key
 
 
-
 [Author: Christotle Agholor](https://github.com/johnchristotle)
