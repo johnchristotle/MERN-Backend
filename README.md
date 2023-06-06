@@ -42,7 +42,7 @@ At the package.json file, a script has been arranged to run the program as shown
 
 ## Endpoints
 Using Postman, you can access this endpoints.
-* NOTE: Bearer Token MUST be pass to the Headers for authorization and access.
+* NOTE: Bearer Token MUST be pass to the Heasders for authorization and access.
 See Examples bellow the Goals/Users note:
 
 
@@ -54,11 +54,12 @@ See Examples bellow the Goals/Users note:
 e.g:
 * Sending...
 **Content-Type:* application/json
-**Token:* Bearer Token passed as to the headers
+**Authorization:* Bearer_token XXXXXX passed as to the headers
 
 
 {
-    "text": "My first goal"
+    "text_title": "My first goal"
+    "text": "This is the body of the text/goal"
 }
 
 * Received (data)
@@ -66,7 +67,8 @@ e.g:
 {
     "_id": "63365b163e6bcc914c46072d",
     "user": "633659bc009ec83f9a790ce8",
-    "text": "My first goal",
+    "text_title": "My first goal"
+    "text": "This is the body of the text/goal",
     "createdAt": "2022-09-30T02:57:26.864Z",
     "updatedAt": "2022-09-30T02:59:47.981Z",
     "__v": 0
@@ -78,6 +80,7 @@ e.g:
 
 * _id: goal id
 * user: id of the user that created the goal (owner)
+* text_title: Text/Goal Title
 * text: goal content/text
 * createdAt: Date the goal was created
 * updatedAt: Date the goal was last updated
@@ -95,7 +98,8 @@ e.g:
     {
         "_id": "63365b0f3e6bcc914c46072a",
         "user": "633659bc009ec83f9a790ce8",
-        "text": "My first goal",
+        "text_title": "My first goal",
+        "text": "This is the body of the text/goal"
         "createdAt": "2022-09-30T02:57:19.602Z",
         "updatedAt": "2022-09-30T02:57:19.602Z",
         "__v": 0
@@ -103,7 +107,8 @@ e.g:
     {
         "_id": "63365b163e6bcc914c46072d",
         "user": "633659bc009ec83f9a790ce8",
-        "text": "My Second goal",
+        "text_title": "My Second goal",
+        "text": "This the second goal's body text",
         "createdAt": "2022-09-30T02:57:26.864Z",
         "updatedAt": "2022-09-30T02:59:47.981Z",
         "__v": 0
@@ -122,7 +127,8 @@ e.g:
 {
         "_id": "63365b0f3e6bcc914c46072a",
         "user": "633659bc009ec83f9a790ce8",
-        "text": "My first goal",
+        "text_title": "My first goal",
+        "text": "This is the body of the text/goal",
         "createdAt": "2022-09-30T02:57:19.602Z",
         "updatedAt": "2022-09-30T02:57:19.602Z",
         "__v": 0
@@ -137,22 +143,24 @@ e.g:
 e.g:
 * Sending...
 **Content-Type:* application/json
-**Token:* Bearer Token passed as to the headers
+**Authorization:* Bearer_token XXXXXX passed as to the headers
 
 
 {
-    "text": "My first goal now updated"
+    "text_title": "My Second goal",
+    "text": "My Second goal now updated",
 }
 
 * Received (data)
 
 {
-    "_id": "63365b163e6bcc914c46072d",
-    "user": "633659bc009ec83f9a790ce8",
-    "text": "My first goal now updated",
-    "createdAt": "2022-09-30T02:57:26.864Z",
-    "updatedAt": "2022-09-30T02:59:47.981Z",
-    "__v": 0
+  "_id": "63365b163e6bcc914c46072d",
+        "user": "633659bc009ec83f9a790ce8",
+        "text_title": "My Second goal",
+        "text": "My Second goal now updated",
+        "createdAt": "2022-09-30T02:57:26.864Z",
+        "updatedAt": "2022-09-30T02:59:47.981Z",
+        "__v": 0
 }
 
 ```
@@ -161,6 +169,7 @@ e.g:
 
 * _id: goal id
 * user: id of the user that created the goal (owner)
+* text_title: Text/Goal Title
 * text: updated goal content/text
 * createdAt: Date the goal was created
 * updatedAt: Date the goal was last updated
@@ -262,7 +271,7 @@ e.g:
 * Get Current User (Private: Only an authenticated user can also do this)
 
 GET: http://localhost:5001/api/users/me
-**Token:* Bearer Token passed as to the headers
+**Authorization:* Bearer_token XXXXXX as to the headers
 
 ```
 e.g:
