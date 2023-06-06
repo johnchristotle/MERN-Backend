@@ -300,4 +300,176 @@ e.g:
 * publicKey: user's public key
 
 
+
+
+* Get All Users (Public: But this can be adjusted and allow only Admin to see it)
+
+GET: http://localhost:5001/api/users/all
+
+```
+e.g:
+* Response...
+* No Token needed (But can be adjusted to allow only admin to access this full record) 
+
+[
+    {
+        "_id": "647d4c3b000362a1a6336cee",
+        "name": "Christotle Agholor",
+        "email": "abc@gmail.com",
+        "phone": "09011100022",
+        "password": "$2a$10$JX73Ui7Ma4gtfSV.L2I8P.gSbiBk/cIzRV7CcELDQz8kzL9K31mr6",
+        "privateKey": "pv_i8EqSgSfG9IcbmPHaErVXNzTy",
+        "publicKey": "pk_G1xUAWBfIDHPYyWTpSwZq5Psq",
+        "createdAt": "2023-06-05T02:45:15.569Z",
+        "updatedAt": "2023-06-05T02:45:15.569Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d4c89000362a1a6336cf1",
+        "name": "Rose John",
+        "email": "xyz@gmail.com",
+        "phone": "07011100022",
+        "password": "$2a$10$VeBOFOusikI4I8YC3J.yHO4vgQ2oVH/Da3R1OIL6NsoSIh0De4wnu",
+        "privateKey": "pv_MfW2Nezb6a76GsuD9ydfBPt8x",
+        "publicKey": "pk_7rbaronhq0YlmuH7kcCJtV8h6",
+        "createdAt": "2023-06-05T02:46:33.540Z",
+        "updatedAt": "2023-06-05T02:46:33.540Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d4ca7000362a1a6336cf4",
+        "name": "Kate Ubaka",
+        "email": "kateuba@gmail.com",
+        "phone": "01034100022",
+        "password": "$2a$10$yKNNM8jWYh0iLXdmepeU1.6Q/0ZdJ6GLFyFSeOEwUIftcjcHf800y",
+        "privateKey": "pv_QUtf3xP3vTIFZ69N3RMb8xVbw",
+        "publicKey": "pk_iM0BvWQuhDbdvDrCNP6OspbNT",
+        "createdAt": "2023-06-05T02:47:03.704Z",
+        "updatedAt": "2023-06-05T02:47:03.704Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d7606ac03c40722938e0d",
+        "name": "Christian Amah",
+        "email": "123@gmail.com",
+        "phone": "09012345678",
+        "password": "$2a$10$ixJmNtPgMnWJf.zAD5v8aejWjXFu8sVG8Ci0JP5Zp59HIN.jFjxm6",
+        "privateKey": "pv_pJyEOF856bj053PFCiQnOvc28",
+        "publicKey": "pk_y1pinbifPVNitL5FDkEV3ks85",
+        "createdAt": "2023-06-05T05:43:34.332Z",
+        "updatedAt": "2023-06-05T05:43:34.332Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d7650ac03c40722938e10",
+        "name": "James Fubara",
+        "email": "uba@gmail.com",
+        "phone": "020145645678",
+        "password": "$2a$10$Nugq77HySeqr.gCwtts73u9Sdx8dMoiLIzzdMnhMZFZDZnEwB63wG",
+        "privateKey": "pv_4zpS2tRESSqPiVqsYhG1YpzJL",
+        "publicKey": "pk_mw3Bs5UlZFbPni1ahXqoiXMxK",
+        "createdAt": "2023-06-05T05:44:48.157Z",
+        "updatedAt": "2023-06-05T05:44:48.157Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d76ebac03c40722938e13",
+        "name": "Rosy Manukwor",
+        "email": "sory@gmail.com",
+        "phone": "020145645678",
+        "password": "$2a$10$CfZUNLAr4cxcKsPNEzKUP.EdL/pEpU9vR2oitS.ItGTnq8GvszG/q",
+        "privateKey": "pv_lpbzTqqIojB7aIHCQwMcWLW0o",
+        "publicKey": "pk_PnkU4UfLg77s5O3PGn9700Nzy",
+        "createdAt": "2023-06-05T05:47:23.352Z",
+        "updatedAt": "2023-06-05T05:47:23.352Z",
+        "__v": 0
+    },
+    {
+        "_id": "647d7741ac03c40722938e16",
+        "name": "Johna Dapson",
+        "email": "josh@gmail.com",
+        "phone": "030145645678",
+        "password": "$2a$10$Fgomc1zlGZ6MeXx7o5PW2.tb73DEJW1i7H7yozSQCssoaTz8X/VGi",
+        "privateKey": "pv_TQTahiB4120HrpleqrpWeMyTp",
+        "publicKey": "pk_algWaapNZ2lGTj6OtFmDCbJlg",
+        "createdAt": "2023-06-05T05:48:49.048Z",
+        "updatedAt": "2023-06-05T05:48:49.048Z",
+        "__v": 0
+    },
+    {
+        "_id": "647e03d1ac03c40722938e19",
+        "name": "Peter Akpan",
+        "email": "petertak@gmail.com",
+        "phone": "030145645678",
+        "password": "$2a$10$uRC8vaoojq6VJyhyPc1AjuF1f92gH7cUIUEig/gqD3092XXKBi5jW",
+        "privateKey": "pv_qfF10jb69UysxUTErgiSXljOq",
+        "publicKey": "pk_U7M7ItSLDfqHTx0e3iL0yGSzW",
+        "createdAt": "2023-06-05T15:48:33.711Z",
+        "updatedAt": "2023-06-05T15:48:33.711Z",
+        "__v": 0
+    },
+    {
+        "_id": "647e138eac03c40722938e1d",
+        "name": "Uche Oladi",
+        "email": "ucheo@gmail.com",
+        "phone": "060145645678",
+        "password": "$2a$10$tbkru8DfdtSrGPJnHjer3e347JXQaWrzT2bDX.nd/YTN1LvJoPqg.",
+        "privateKey": "pv_RL16nKuwcgVl2EQPwBoXs6fh2",
+        "publicKey": "pk_lK7fTT95tAzj8fpt79M12yK6A",
+        "createdAt": "2023-06-05T16:55:42.112Z",
+        "updatedAt": "2023-06-05T16:55:42.112Z",
+        "__v": 0
+    },
+    {
+        "_id": "647e2113ac03c40722938e21",
+        "name": "Blessing Ogenika",
+        "email": "blessingg@gmail.com",
+        "phone": "060145645678",
+        "password": "$2a$10$2y5.ml3bOzm2L7LwXQoDF.jvmqRvmad7jl4gD2NVIyq2kDnyk2O0S",
+        "privateKey": "pv_iml6d5HZ8actNQ7P7YeIiJQQQ",
+        "publicKey": "pk_bG3hXJ2uKpHfLPuRnZzrrnwn5",
+        "createdAt": "2023-06-05T17:53:23.833Z",
+        "updatedAt": "2023-06-05T17:53:23.833Z",
+        "__v": 0
+    },
+    {
+        "_id": "647e9ff8ac03c40722938e27",
+        "name": "Chika Animali",
+        "email": "chigirl@gmail.com",
+        "phone": "060145645678",
+        "password": "$2a$10$1dMj0s/6qiVpSXkZG2e27OXBPxN3.t3vb96YIktOoM9wV/coqRzZW",
+        "privateKey": "pv_YNVoM5Qvox3Wuq0T82jK96YFu",
+        "publicKey": "pk_4PBoGbY25yhxw424GVYWJDHdJ",
+        "createdAt": "2023-06-06T02:54:48.094Z",
+        "updatedAt": "2023-06-06T02:54:48.094Z",
+        "__v": 0
+    },
+    {
+        "_id": "647ea047ac03c40722938e2c",
+        "name": "Anamali Chika",
+        "email": "anychigirl@gmail.com",
+        "phone": "060145645678",
+        "password": "$2a$10$NReRlL3nQN93I1Fkhe4KIuyBJdEB.tMtVvN2SLR35pG/IqtAfee0K",
+        "privateKey": "pv_0tRV8E5URw7PuOIahUOjXnF5p",
+        "publicKey": "pk_eiS7jczFwphdRIt5EcVSe6xKt",
+        "createdAt": "2023-06-06T02:56:07.346Z",
+        "updatedAt": "2023-06-06T02:56:07.346Z",
+        "__v": 0
+    },
+    {
+        "_id": "647ea2acac03c40722938e2f",
+        "name": "Developer Christotle",
+        "email": "devchris@gmail.com",
+        "phone": "060145645678",
+        "password": "$2a$10$m4/v8MUHvlhwqdy7cXHpHenrMaT9EvQlsmT6uN32B.PYud/fqIGIO",
+        "privateKey": "pv_r3wcsxZdxf0y2YzT30kWzVlKR",
+        "publicKey": "pk_NmWVmpo1eUXC0lm2EJD2i2BcO",
+        "createdAt": "2023-06-06T03:06:20.884Z",
+        "updatedAt": "2023-06-06T03:06:20.884Z",
+        "__v": 0
+    }
+]
+```
+
+
 [Author: Christotle Agholor](https://github.com/johnchristotle)
