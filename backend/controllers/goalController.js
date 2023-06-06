@@ -17,11 +17,12 @@ const getGoals = asyncHandler(async(req, res) => {
 //@access - private
 
 const setGoals = asyncHandler(async(req, res) => {
-    if(!req.body.text){
+    if(!req.body.text && !req.body.text_title){
         res.status(400)
-        throw new Error('Please add a text')
+        throw new Error('Please add a text and its title')
     }
     const goal = await Goal.create({
+        text_title: req.body.text_title,
         text: req.body.text,
         user: req.user.id
     })

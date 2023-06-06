@@ -10,7 +10,7 @@ connectDB();
 
 
 app.get('/', (req, res) => {
-    res.json('Christotle Goal App API')
+    res.json('Totlesoft Goal Backend App')
 })
 
 
@@ -21,5 +21,5 @@ app.use('/api/users', userRoutes)
 
 
 app.listen(PORT, () => {
-    console.log(`Server up on port ${PORT}`)
+    console.log(`Totlesoft Server up on port ${PORT}`)
 })

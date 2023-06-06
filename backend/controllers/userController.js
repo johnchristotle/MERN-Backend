@@ -85,6 +85,7 @@ const loginUser = asyncHandler(async(req, res) => {
 });
 
 
+
 //@desc - Get Current User
 //@route - GET /api/users/me
 //@access - private
@@ -104,7 +105,7 @@ const getCurrentUser = asyncHandler(async(req, res) => {
 // Generate Token
 const generateToken = (id) => {
     return jwt.sign({id}, process.env.JWT_SECRET, {
-        expiresIn:'3m'
+        expiresIn:'300s'
     })
 }
 
@@ -116,11 +117,35 @@ const generateToken = (id) => {
 const getAllUsers = asyncHandler((async(req, res) => {
     const users = await User.find()
     res.status(200).json(users)
-}));
+}))
+
+
+//@desc - UPDATE Users
+//@route - PUT /api/users/update/:id
+//@access - private
+
+const updateUsers = asyncHandler(async(req, res) => {
+    
+    const user = await User.findById(req.params.id)
+ 
+     //check for user
+     if(!user){
+         res.status(401)
+         throw new Error('User not found')
+     }
+ 
+     const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        res.status(200).json(updatedUser)
+ });
+ 
+
+
+
 
 module.exports = {
     registerUser,
     loginUser,
     getCurrentUser,
-    getAllUsers
+    getAllUsers,
+    updateUsers
 }

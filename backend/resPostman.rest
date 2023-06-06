@@ -1,0 +1,91 @@
+POST http://localhost:5001/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Developer Christotle",
+    "email": "devchris@gmail.com",
+    "phone": "060145645678",
+    "password": "123456"
+}
+
+
+###
+
+POST http://localhost:5001/api/users/login
+Content-Type: application/json
+
+{
+    "email": "devchris@gmail.com",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:5001/api/goals
+Content-Type: application/json
+Authorization: Bearer_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhMmFjYWMwM2M0MDcyMjkzOGUyZiIsImlhdCI6MTY4NjAyNDgwNCwiZXhwIjoxNjg2MDI0OTg0fQ.pUadKMlInGC0j-vTg4ECgRdutNjOjRnBMlzmsUd9dlg
+
+{
+    "text_title": "My Five Title",
+    "text": "My Life and all And I say Everything is still very posible if you set your heart to it"
+}
+
+###
+
+GET http://localhost:5001/api/users/me
+Authorization: Bearer_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhMmFjYWMwM2M0MDcyMjkzOGUyZiIsImlhdCI6MTY4NjAyNTI4MiwiZXhwIjoxNjg2MDI1NDYyfQ.-pYJUm6fbwJ5Wg-7fAlgYazdPs2YO1qS1ujTwVMgnAM
+
+
+###
+
+GET http://localhost:5001/api/goals
+Authorization: Bearer_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhMmFjYWMwM2M0MDcyMjkzOGUyZiIsImlhdCI6MTY4NjAyNTY0MiwiZXhwIjoxNjg2MDI1ODIyfQ.7I7P3o98G4Da2u29MD-XMhLpH1daL-KkQrgN8E6P9ro
+
+
+###
+
+GET http://localhost:5001/api/goals/647eaeba6b930013afb95518
+Authorization: Bearer_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhMmFjYWMwM2M0MDcyMjkzOGUyZiIsImlhdCI6MTY4NjAyMzgzNCwiZXhwIjoxNjg2MDI0MDE0fQ.1IagOPFKKKoDOiEmt9epOIGBuOnnIksZP60nzta61yI
+
+
+###
+
+PUT http://localhost:5001/api/goals/647eb27f6b930013afb9551e
+Content-Type: application/json
+Authorization: Bearer_token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhMmFjYWMwM2M0MDcyMjkzOGUyZiIsImlhdCI6MTY4NjAyNTA3NCwiZXhwIjoxNjg2MDI1MjU0fQ.sUjmVFeGflMcGTnLCOdpflrSaJ4QQwK47jd0MnBXs5w
+
+{
+    "text_title": "My Five Title now Updated",
+    "text": "I am updating this text. for texting the Update Endpoints"
+}
+
+
+###
+
+PUT http://localhost:5001/api/users/update/647d4c89000362a1a6336cf1
+Content-Type: application/json
+
+{
+    "name": "Rose John Updated",
+    "email": "xyz@gmail.com",
+    "phone": "07011100022",
+    "password": "123456"
+}
+
+
+###
+
+GET http://localhost:5001/api/users/all
+
+
+###
+
+PUT  http://localhost:5001/api/users/update/647d4c89000362a1a6336cf1
+Content-Type: application/json
+
+{
+    "name": "Christotle Agholor Snr",
+    "email": "abc@gmail.com",
+    "phone": "050145645678",
+    "password": "123456"
+}
